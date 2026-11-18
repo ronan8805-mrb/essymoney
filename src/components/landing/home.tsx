@@ -1,6 +1,6 @@
 import { Header } from "./header";
 import { Hero } from "./hero";
-import { Faq, Footer, Join, Platform, Pricing, Story } from "./sections";
+import { Faq, Footer, Join, Story } from "./sections";
 
 export function HomePage() {
   return (
@@ -9,8 +9,6 @@ export function HomePage() {
       <main>
         <Hero />
         <Story />
-        <Platform />
-        <Pricing />
         <Join />
         <Faq />
       </main>

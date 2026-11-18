@@ -8,11 +8,11 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Easy Money — Automated copy trading" },
+      { title: "Easy Money — Trading while you sleep" },
       {
         name: "description",
         content:
-          "Easy Money is an AI copy-trading desk. Follow professional strategies, automate the trades, and read every result. Showcase for easymoneytrading.com.",
+          "An expert trader places the trade. Easy Money copies it for you at the same time. Free forever. Join the Telegram group.",
       },
       { name: "theme-color", content: "#07040a" },
     ],

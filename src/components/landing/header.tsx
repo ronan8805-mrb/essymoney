@@ -4,9 +4,8 @@ import { Mark } from "./mark";
 
 const LINKS = [
   { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#platform", label: "Platform" },
-  { href: "#pricing", label: "Pricing" },
+  { href: "#services", label: "How it works" },
+  { href: "#join", label: "Telegram" },
 ];
 
 export function Header() {
@@ -48,7 +47,7 @@ export function Header() {
             href="#join"
             className="tap hidden h-10 items-center rounded-pill bg-fg px-4 text-sm font-medium text-ink md:inline-flex"
           >
-            Start now
+            Join Telegram
           </a>
           <button
             type="button"
@@ -80,7 +79,7 @@ export function Header() {
               className="tap mt-3 flex h-12 items-center justify-center rounded-pill bg-fg text-sm font-medium text-ink"
               onClick={() => setOpen(false)}
             >
-              Start now
+              Join Telegram
             </a>
           </nav>
         </div>
