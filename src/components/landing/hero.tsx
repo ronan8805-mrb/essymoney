@@ -64,7 +64,6 @@ function Dust() {
       v: Math.random() * 0.00012 + 0.00003,
       drift: Math.random() * 0.00006 + 0.00002,
       phase: Math.random() * Math.PI * 2,
-      gold: Math.random() > 0.35,
     }));
 
     const resize = () => {
@@ -87,7 +86,7 @@ function Dust() {
         if (speck.y < 0) speck.y += 1;
         if (speck.x > 1) speck.x -= 1;
         const alpha = 0.25 + 0.55 * (0.5 + 0.5 * Math.sin(time * 0.0012 + speck.phase));
-        ctx.fillStyle = speck.gold ? `rgba(214, 226, 70, ${alpha})` : `rgba(10, 186, 181, ${alpha * 0.85})`;
+        ctx.fillStyle = `rgba(198, 215, 15, ${alpha})`;
         ctx.beginPath();
         ctx.arc(speck.x * w, speck.y * h, speck.r * (w / 900), 0, Math.PI * 2);
         ctx.fill();
@@ -133,7 +132,7 @@ export function Hero() {
             <span className="rise block" style={{ ["--delay" as string]: "0.12s" }}>
               Trading
             </span>
-            <span className="rise mt-1 block italic" style={{ ["--delay" as string]: "0.22s" }}>
+            <span className="rise mt-1 block" style={{ ["--delay" as string]: "0.22s" }}>
               While You Sleep
             </span>
           </h1>

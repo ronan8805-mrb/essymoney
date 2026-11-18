@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;500;600&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Instrument Serif", Georgia, ui-serif, serif;
+  --font-display: "Anton", Impact, sans-serif;
 
   --color-bg: #07040a;
   --color-raised: #120910;
@@ -11,7 +11,7 @@
   --color-fg: #f7f2f4;
   --color-muted: #b5a6ad;
   --color-faint: #7c6c73;
-  --color-primary: #0abab5;
+  --color-primary: #c6d70f;
   --color-ink: #14080d;
   --color-line: #3a2830;
 
@@ -66,8 +66,9 @@
 .display {
   font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 0.96;
+  letter-spacing: 0.02em;
+  line-height: 0.92;
+  text-transform: uppercase;
 }
 
 .glass {

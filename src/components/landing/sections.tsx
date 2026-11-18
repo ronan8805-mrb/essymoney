@@ -177,7 +177,7 @@ export function Reviews() {
           {REVIEWS.map((review) => (
             <figure key={review.name} className="flex flex-col rounded-card border border-line bg-raised p-6">
               <Stars />
-              <blockquote className="display mt-5 text-2xl leading-snug text-fg">“{review.quote}”</blockquote>
+              <blockquote className="mt-5 text-lg leading-snug text-fg">“{review.quote}”</blockquote>
               <figcaption className="mt-8 flex items-center gap-3 text-sm">
                 <span className="grid size-10 place-items-center rounded-pill bg-bg text-sm font-medium text-fg">
                   {review.name.slice(0, 1)}
