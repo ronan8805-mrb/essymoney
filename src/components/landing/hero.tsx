@@ -71,7 +71,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex min-h-svh max-w-6xl flex-col px-5 pt-24 pb-8 md:pt-28">
         <div className="mx-auto max-w-3xl text-center">
           <p className="rise eyebrow" style={{ ["--delay" as string]: "0.05s" }}>
-            A real expert trader
+            A real expert trader & RTX 5090
           </p>
           <h1 className="display mt-5 text-5xl text-fg sm:text-6xl lg:text-7xl">
             <span className="rise block" style={{ ["--delay" as string]: "0.12s" }}>
@@ -85,7 +85,7 @@ export function Hero() {
             className="rise mx-auto mt-5 max-w-md text-base leading-relaxed text-muted"
             style={{ ["--delay" as string]: "0.32s" }}
           >
-            Open the account, connect our broker and we do the rest.
+            Open the account, connect our broker and we do the rest. Automatically copy the trades without lifting a finger.
           </p>
           <div className="rise mt-7" style={{ ["--delay" as string]: "0.42s" }}>
             <StartButton label="Start trading" />

@@ -1,4 +1,4 @@
-import { Bot, Cpu, Headphones, Wallet } from "lucide-react";
+import { Bot, Cpu, Headphones, Star, Wallet } from "lucide-react";
 import { Mark } from "./mark";
 
 const PILLARS = [
@@ -149,24 +149,47 @@ const REVIEWS = [
   },
 ];
 
+function Stars() {
+  return (
+    <div className="flex gap-1 text-primary" aria-label="5 stars">
+      {Array.from({ length: 5 }, (_, index) => (
+        <Star key={index} className="size-4 fill-current" strokeWidth={0} />
+      ))}
+    </div>
+  );
+}
+
 export function Reviews() {
   return (
     <section id="reviews" className="scroll-mt-20 border-t border-line">
       <div className="mx-auto max-w-6xl px-5 py-24 md:py-32">
-        <SectionLabel>Members</SectionLabel>
-        <h2 className="display mt-4 max-w-xl text-4xl text-fg md:text-5xl">From people who already started.</h2>
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <SectionLabel>Members</SectionLabel>
+            <h2 className="display mt-4 max-w-xl text-4xl text-fg md:text-5xl">From people who already started.</h2>
+          </div>
+          <p className="pointer-events-none flex cursor-default items-center gap-3 text-sm text-muted select-none">
+            <Stars />
+            <span>Over 100 more</span>
+          </p>
+        </div>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {REVIEWS.map((review) => (
-            <figure key={review.name} className="flex flex-col rounded-card border border-line bg-bg p-6">
-              <blockquote className="text-base leading-relaxed text-fg">“{review.quote}”</blockquote>
-              <figcaption className="mt-6 text-sm text-muted">
-                <span className="text-fg">{review.name}</span>
-                <span className="text-faint"> · {review.place}</span>
+            <figure key={review.name} className="flex flex-col rounded-card border border-line bg-raised p-6">
+              <Stars />
+              <blockquote className="display mt-5 text-2xl leading-snug text-fg">“{review.quote}”</blockquote>
+              <figcaption className="mt-8 flex items-center gap-3 text-sm">
+                <span className="grid size-10 place-items-center rounded-pill bg-bg text-sm font-medium text-fg">
+                  {review.name.slice(0, 1)}
+                </span>
+                <span>
+                  <span className="block text-fg">{review.name}</span>
+                  <span className="text-faint">{review.place}</span>
+                </span>
               </figcaption>
             </figure>
           ))}
         </div>
-        <p className="pointer-events-none mt-8 cursor-default select-none text-sm text-faint">Over 100 more</p>
       </div>
     </section>
   );
@@ -204,7 +227,7 @@ export function Footer() {
             <Mark className="h-16 w-auto" />
           </a>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-            Open the account, connect our broker and we do the rest.
+            Open the account, connect our broker and we do the rest. Automatically copy the trades without lifting a finger.
           </p>
         </div>
         <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted" aria-label="Footer">
