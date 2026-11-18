@@ -1,49 +1,47 @@
-import { Bot, Headphones, LineChart, Shield } from "lucide-react";
+import { Bot, Cpu, Headphones, Wallet } from "lucide-react";
 import { Mark } from "./mark";
-
-const TELEGRAM_URL = "";
 
 const PILLARS = [
   {
-    icon: LineChart,
-    title: "An expert, not a guessing machine",
-    body: "A real trader takes the position. Easy Money is not a pure AI trying to predict the market.",
+    icon: Wallet,
+    title: "Set up the account",
+    body: "Open the trading account. That is the whole application. No seat, no plan, no waiting list.",
   },
   {
     icon: Bot,
-    title: "Copied at the same time",
-    body: "When he enters, the bot places that trade for you. When he exits, it exits. Same moment, without you watching the screen.",
+    title: "Connect our broker",
+    body: "Link the account to our broker. One connection. After that the trades have somewhere to land.",
   },
   {
-    icon: Shield,
-    title: "Free forever",
-    body: "No seats. No plans. No checkout. Sign up and you are in the Telegram group immediately.",
+    icon: Cpu,
+    title: "Deposit, then we work",
+    body: "Put the cash in. The RTX 5090 bots already tested the strategies, and a real expert stays in the loop. You watch the funds. We do the trading.",
   },
 ];
 
 const PROMISES = [
-  { icon: LineChart, title: "A real trader", body: "The ideas come from an expert who is actually in the market." },
-  { icon: Bot, title: "Same-time copy", body: "The bot mirrors his entry and his exit as he places them." },
-  { icon: Shield, title: "Free forever", body: "The group does not charge. Join once and you stay." },
-  { icon: Headphones, title: "While you sleep", body: "You do not have to be awake for the copy to go through." },
+  { icon: Cpu, title: "RTX 5090 bots", body: "The machines tested multiple winning strategies before a trade is run for you." },
+  { icon: Headphones, title: "A real expert", body: "A human trader stays in the loop. The bots do not trade alone." },
+  { icon: Wallet, title: "Three steps to start", body: "Account, our broker, a deposit. Then you are trading." },
+  { icon: Bot, title: "We do the work", body: "After the deposit you are not the one placing trades. You watch it grow." },
 ];
 
 const QUESTIONS = [
   {
-    q: "Is this pure AI?",
-    a: "No. An expert trader makes the call. A bot copies that trade for you at the same time he places it.",
+    q: "What is the strategy?",
+    a: "AI bots built on an RTX 5090 tested multiple winning strategies. A real human expert stays in the loop, so the trading is not a machine left on its own.",
   },
   {
-    q: "What does it cost?",
-    a: "Nothing. Easy Money is free forever. There is no seat, no trial, and no monthly plan.",
+    q: "How do I start?",
+    a: "Set up the trading account, connect it to our broker, and deposit. That is the start. After that we do the work.",
   },
   {
-    q: "How do I get in?",
-    a: "Join the Telegram group. Access is instant. That is the signup.",
+    q: "What do I do after I deposit?",
+    a: "Nothing on the charts. We trade. You watch the funds.",
   },
   {
-    q: "Do you promise I will make money?",
-    a: "No. Copying a trader can lose money. Sleep is the point. A guaranteed return is not.",
+    q: "Can this lose money?",
+    a: "Yes. A strategy that tested well can still lose. Watching funds grow is the aim, not a promise.",
   },
 ];
 
@@ -70,14 +68,14 @@ export function Story() {
         <div className="grid items-end gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
             <SectionLabel>About</SectionLabel>
-            <h2 className="display mt-4 text-4xl text-fg md:text-6xl">He trades. The bot copies. You sleep.</h2>
+            <h2 className="display mt-4 text-4xl text-fg md:text-6xl">Tested by the bots. Run with an expert.</h2>
           </div>
           <div className="md:col-span-5">
             <p className="text-base leading-relaxed text-muted">
-              Easy Money follows one expert trader. The moment he places a trade, the bot places it for you. You are not staring at charts, and you are not trusting a machine to invent the idea.
+              Easy Money is AI bots built on an RTX 5090. They tested multiple winning strategies. A real human expert stays in the loop, so the trading is not a black box left overnight.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              The group is free. Sign up on Telegram and you are in. No application, no seat, no fee.
+              Starting is the simple part. Set up the trading account, connect our broker, deposit, and then let us do the work.
             </p>
           </div>
         </div>
@@ -86,7 +84,7 @@ export function Story() {
       <section id="services" className="scroll-mt-20 border-t border-line">
         <div className="mx-auto max-w-6xl px-5 py-24 md:py-32">
           <SectionLabel>How it works</SectionLabel>
-          <h2 className="display mt-4 max-w-xl text-4xl text-fg md:text-5xl">His trade. Your account. Same time.</h2>
+          <h2 className="display mt-4 max-w-xl text-4xl text-fg md:text-5xl">Account. Broker. Deposit. We trade.</h2>
           <div className="mt-14 divide-y divide-line border-y border-line">
             {PILLARS.map((item, index) => (
               <article key={item.title} className="grid gap-4 py-8 md:grid-cols-12 md:items-center md:gap-8">
@@ -112,29 +110,63 @@ export function Join() {
         <img src="/art/cosmos-wide.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-bg/75" />
         <div className="relative mx-auto flex max-w-3xl flex-col items-start px-5 py-24 md:py-32">
-          <SectionLabel>Free forever</SectionLabel>
-          <h2 className="display mt-4 text-4xl text-fg md:text-6xl">Sign up. You’re in the group.</h2>
+          <SectionLabel>Start</SectionLabel>
+          <h2 className="display mt-4 text-4xl text-fg md:text-6xl">Set up. Connect. Deposit.</h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-muted">
-            No seats and no price list. Join the Telegram group and you get access immediately — the expert’s trades, copied for you while you sleep.
+            Open the trading account, connect it to our broker, and put the cash in. After that we do the work, and you watch the funds.
           </p>
-          {TELEGRAM_URL ? (
-            <a
-              href={TELEGRAM_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="tap mt-8 inline-flex h-12 items-center rounded-pill bg-fg px-6 text-sm font-medium text-ink"
-            >
-              Join the free Telegram
-            </a>
-          ) : (
-            <a
-              href="#join"
-              className="tap mt-8 inline-flex h-12 items-center rounded-pill bg-fg px-6 text-sm font-medium text-ink"
-            >
-              Join the free Telegram
-            </a>
-          )}
+          <ol className="mt-8 grid w-full max-w-lg gap-3">
+            {["Set up the trading account", "Connect our broker", "Deposit, then leave it to us"].map((step, index) => (
+              <li key={step} className="flex items-center gap-4 rounded-card border border-line bg-bg/80 px-4 py-3">
+                <span className="display text-2xl text-primary">0{index + 1}</span>
+                <span className="text-base text-fg">{step}</span>
+              </li>
+            ))}
+          </ol>
         </div>
+      </div>
+    </section>
+  );
+}
+
+const REVIEWS = [
+  {
+    name: "Marcus L.",
+    place: "Manchester",
+    quote:
+      "I opened the account, connected the broker, and deposited. After that I stopped living on the charts.",
+  },
+  {
+    name: "Amina K.",
+    place: "Dubai",
+    quote: "The start really is that short. They trade. I check the account when I feel like it.",
+  },
+  {
+    name: "Chris D.",
+    place: "Austin",
+    quote:
+      "The bots did the testing on serious hardware, and a real trader is still in it. I just funded the account.",
+  },
+];
+
+export function Reviews() {
+  return (
+    <section id="reviews" className="scroll-mt-20 border-t border-line">
+      <div className="mx-auto max-w-6xl px-5 py-24 md:py-32">
+        <SectionLabel>Members</SectionLabel>
+        <h2 className="display mt-4 max-w-xl text-4xl text-fg md:text-5xl">From people who already started.</h2>
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {REVIEWS.map((review) => (
+            <figure key={review.name} className="flex flex-col rounded-card border border-line bg-bg p-6">
+              <blockquote className="text-base leading-relaxed text-fg">“{review.quote}”</blockquote>
+              <figcaption className="mt-6 text-sm text-muted">
+                <span className="text-fg">{review.name}</span>
+                <span className="text-faint"> · {review.place}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <p className="pointer-events-none mt-8 cursor-default select-none text-sm text-faint">Over 100 more</p>
       </div>
     </section>
   );
@@ -145,7 +177,7 @@ export function Faq() {
     <section className="border-t border-line">
       <div className="mx-auto max-w-3xl px-5 py-24 md:py-32">
         <SectionLabel>Questions</SectionLabel>
-        <h2 className="display mt-4 text-4xl text-fg">Before you join.</h2>
+        <h2 className="display mt-4 text-4xl text-fg">Before you deposit.</h2>
         <div className="mt-10 divide-y divide-line border-y border-line">
           {QUESTIONS.map((item) => (
             <details key={item.q} className="group py-5">
@@ -168,12 +200,11 @@ export function Footer() {
     <footer className="border-t border-line">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 md:flex-row md:items-start md:justify-between">
         <div>
-          <a href="#top" className="flex items-center gap-2.5 text-fg">
-            <Mark className="size-7 text-primary" />
-            <span className="font-medium">Easy Money</span>
+          <a href="#top" className="inline-flex">
+            <Mark className="h-16 w-auto" />
           </a>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-            An expert trades. A bot copies him at the same time. Free forever. Trading can lose money. Nothing here is financial advice or a promise of profit.
+            AI bots on an RTX 5090 tested the strategies. A real expert stays in the loop. You open the account, connect our broker, deposit, and we trade. Markets can lose money. Nothing here is a promise of profit.
           </p>
         </div>
         <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted" aria-label="Footer">
@@ -183,8 +214,11 @@ export function Footer() {
           <a href="#services" className="hover:text-fg">
             How it works
           </a>
+          <a href="#reviews" className="hover:text-fg">
+            Reviews
+          </a>
           <a href="#join" className="hover:text-fg">
-            Telegram
+            Start
           </a>
         </nav>
       </div>

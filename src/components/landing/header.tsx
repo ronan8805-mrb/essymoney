@@ -5,7 +5,8 @@ import { Mark } from "./mark";
 const LINKS = [
   { href: "#about", label: "About" },
   { href: "#services", label: "How it works" },
-  { href: "#join", label: "Telegram" },
+  { href: "#reviews", label: "Reviews" },
+  { href: "#join", label: "Start" },
 ];
 
 export function Header() {
@@ -29,9 +30,8 @@ export function Header() {
   return (
     <header className={`nav-bar fixed inset-x-0 top-0 z-40 ${solid || open ? "is-solid" : ""}`}>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <a href="#top" className="flex items-center gap-2.5 text-fg">
-          <Mark className="size-7 text-primary" />
-          <span className="text-base font-medium tracking-tight">Easy Money</span>
+        <a href="#top" className="flex items-center text-fg">
+          <Mark className="h-12 w-auto" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
@@ -47,7 +47,7 @@ export function Header() {
             href="#join"
             className="tap hidden h-10 items-center rounded-pill bg-fg px-4 text-sm font-medium text-ink md:inline-flex"
           >
-            Join Telegram
+            Start trading
           </a>
           <button
             type="button"
@@ -79,7 +79,7 @@ export function Header() {
               className="tap mt-3 flex h-12 items-center justify-center rounded-pill bg-fg text-sm font-medium text-ink"
               onClick={() => setOpen(false)}
             >
-              Join Telegram
+              Start trading
             </a>
           </nav>
         </div>

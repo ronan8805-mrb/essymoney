@@ -120,30 +120,38 @@
   transition: transform 500ms ease-out;
 }
 
+.slot-sleeve,
+.slot-risk,
+.slot-equity,
+.slot-copies,
+.slot-auto {
+  position: absolute;
+}
+
 .slot-sleeve {
-  top: 34%;
-  left: 4%;
+  top: 22%;
+  left: 2.5%;
   width: 16rem;
 }
 .slot-risk {
-  top: 62%;
-  left: 7%;
+  top: 58%;
+  left: 5%;
   width: 15rem;
 }
 .slot-equity {
-  top: 44%;
+  top: 66%;
   left: 50%;
   width: 18.5rem;
   margin-left: -9.25rem;
 }
 .slot-copies {
-  top: 32%;
-  right: 4%;
+  top: 20%;
+  right: 2.5%;
   width: 16rem;
 }
 .slot-auto {
-  top: 64%;
-  right: 7%;
+  top: 54%;
+  right: 5%;
   width: 14rem;
 }
 .risk-fill {

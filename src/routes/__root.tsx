@@ -12,12 +12,12 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "An expert trader places the trade. Easy Money copies it for you at the same time. Free forever. Join the Telegram group.",
+          "AI bots on an RTX 5090 tested the strategies, with a real expert in the loop. Open an account, connect our broker, deposit, and we do the trading.",
       },
       { name: "theme-color", content: "#07040a" },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "stylesheet", href: appCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
