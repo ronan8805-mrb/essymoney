@@ -12,7 +12,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "AI bots on an RTX 5090 tested the strategies, with a real expert in the loop. Open an account, connect our broker, deposit, and we do the trading.",
+          "A real expert trader comes first. His strategies are tested and confirmed on an RTX 5090 trained on over 20 years of real data.",
       },
       { name: "theme-color", content: "#07040a" },
     ],

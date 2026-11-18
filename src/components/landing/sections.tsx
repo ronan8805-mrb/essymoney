@@ -15,21 +15,21 @@ const PILLARS = [
   {
     icon: Cpu,
     title: "Deposit, then we work",
-    body: "Put the cash in. The RTX 5090 bots already tested the strategies, and a real expert stays in the loop. You watch the funds. We do the trading.",
+    body: "Put the cash in. His strategies are already confirmed. You watch the funds. We do the trading.",
   },
 ];
 
 const PROMISES = [
-  { icon: Cpu, title: "RTX 5090 bots", body: "The machines tested multiple winning strategies before a trade is run for you." },
-  { icon: Headphones, title: "A real expert", body: "A human trader stays in the loop. The bots do not trade alone." },
-  { icon: Wallet, title: "Three steps to start", body: "Account, our broker, a deposit. Then you are trading." },
-  { icon: Bot, title: "We do the work", body: "After the deposit you are not the one placing trades. You watch it grow." },
+  { icon: Headphones, title: "A real expert first", body: "The strategies are his. A human trader leads. The machine does not invent the idea." },
+  { icon: Cpu, title: "Confirmed on an RTX 5090", body: "Those strategies are tested and confirmed on a powerful RTX 5090 system." },
+  { icon: Bot, title: "20 years of real data", body: "The system trains on over 20 years of real market data, not a toy history." },
+  { icon: Wallet, title: "Then we trade", body: "Open the account, connect our broker, and we do the rest." },
 ];
 
 const QUESTIONS = [
   {
     q: "What is the strategy?",
-    a: "AI bots built on an RTX 5090 tested multiple winning strategies. A real human expert stays in the loop, so the trading is not a machine left on its own.",
+    a: "A real expert trader comes first. His strategies are tested and confirmed on a powerful RTX 5090, trained on over 20 years of real data.",
   },
   {
     q: "How do I start?",
@@ -68,14 +68,14 @@ export function Story() {
         <div className="grid items-end gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
             <SectionLabel>About</SectionLabel>
-            <h2 className="display mt-4 text-4xl text-fg md:text-6xl">Tested by the bots. Run with an expert.</h2>
+            <h2 className="display mt-4 text-4xl text-fg md:text-6xl">A real expert. Then the machine confirms him.</h2>
           </div>
           <div className="md:col-span-5">
             <p className="text-base leading-relaxed text-muted">
-              Easy Money is AI bots built on an RTX 5090. They tested multiple winning strategies. A real human expert stays in the loop, so the trading is not a black box left overnight.
+              A real expert trader comes first. His strategies are tested and confirmed on a powerful RTX 5090, trained on over 20 years of real data.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              Starting is the simple part. Set up the trading account, connect our broker, deposit, and then let us do the work.
+              Open the account, connect our broker and we do the rest.
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ const REVIEWS = [
     name: "Chris D.",
     place: "Austin",
     quote:
-      "The bots did the testing on serious hardware, and a real trader is still in it. I just funded the account.",
+      "A real trader's strategies, confirmed on an RTX 5090 with decades of data. I just funded the account.",
   },
 ];
 
@@ -204,7 +204,7 @@ export function Footer() {
             <Mark className="h-16 w-auto" />
           </a>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-            AI bots on an RTX 5090 tested the strategies. A real expert stays in the loop. You open the account, connect our broker, deposit, and we trade. Markets can lose money. Nothing here is a promise of profit.
+            Open the account, connect our broker and we do the rest.
           </p>
         </div>
         <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted" aria-label="Footer">

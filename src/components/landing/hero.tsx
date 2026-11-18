@@ -71,7 +71,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex min-h-svh max-w-6xl flex-col px-5 pt-24 pb-8 md:pt-28">
         <div className="mx-auto max-w-3xl text-center">
           <p className="rise eyebrow" style={{ ["--delay" as string]: "0.05s" }}>
-            RTX 5090 bots · expert in the loop
+            A real expert trader
           </p>
           <h1 className="display mt-5 text-5xl text-fg sm:text-6xl lg:text-7xl">
             <span className="rise block" style={{ ["--delay" as string]: "0.12s" }}>
@@ -85,7 +85,7 @@ export function Hero() {
             className="rise mx-auto mt-5 max-w-md text-base leading-relaxed text-muted"
             style={{ ["--delay" as string]: "0.32s" }}
           >
-            AI bots tested the winning strategies. A real trader stays in the loop. Open the account, connect our broker, deposit, and we do the rest.
+            Open the account, connect our broker and we do the rest.
           </p>
           <div className="rise mt-7" style={{ ["--delay" as string]: "0.42s" }}>
             <StartButton label="Start trading" />
