@@ -49,6 +49,61 @@ function Drift({
   );
 }
 
+function Dust() {
+  const ref = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = ref.current;
+    if (!canvas || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const specks = Array.from({ length: 90 }, () => ({
+      x: Math.random(),
+      y: Math.random(),
+      r: Math.random() * 1.3 + 0.25,
+      v: Math.random() * 0.00012 + 0.00003,
+      drift: Math.random() * 0.00006 + 0.00002,
+      phase: Math.random() * Math.PI * 2,
+      gold: Math.random() > 0.35,
+    }));
+
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.max(1, rect.width * dpr);
+      canvas.height = Math.max(1, rect.height * dpr);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    let raf = 0;
+    const draw = (time: number) => {
+      const w = canvas.width;
+      const h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      for (const speck of specks) {
+        speck.y -= speck.v;
+        speck.x += speck.drift;
+        if (speck.y < 0) speck.y += 1;
+        if (speck.x > 1) speck.x -= 1;
+        const alpha = 0.25 + 0.55 * (0.5 + 0.5 * Math.sin(time * 0.0012 + speck.phase));
+        ctx.fillStyle = speck.gold ? `rgba(214, 226, 70, ${alpha})` : `rgba(10, 186, 181, ${alpha * 0.85})`;
+        ctx.beginPath();
+        ctx.arc(speck.x * w, speck.y * h, speck.r * (w / 900), 0, Math.PI * 2);
+        ctx.fill();
+      }
+      raf = requestAnimationFrame(draw);
+    };
+    raf = requestAnimationFrame(draw);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
+  return <canvas ref={ref} className="absolute inset-0 h-full w-full" />;
+}
+
 export function Hero() {
   const stage = useDrift<HTMLElement>();
 
@@ -65,6 +120,7 @@ export function Hero() {
           alt=""
           className="hero-bg-tall absolute inset-0 h-full w-full object-cover object-center"
         />
+        <Dust />
         <div className="hero-shade absolute inset-0" />
       </div>
 

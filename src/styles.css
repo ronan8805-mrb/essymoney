@@ -181,8 +181,22 @@
   }
 }
 
+.hero-bg-wide,
+.hero-bg-tall {
+  animation: cosmos 52s ease-in-out infinite alternate;
+}
+
 .hero-bg-tall {
   display: none;
+}
+
+@keyframes cosmos {
+  from {
+    transform: scale(1.08) translate3d(-1.4%, -1%, 0);
+  }
+  to {
+    transform: scale(1.16) translate3d(1.4%, 1.1%, 0);
+  }
 }
 
 @media (max-width: 767px) {
@@ -208,7 +222,9 @@ summary::-webkit-details-marker {
   }
   .rise,
   .bob,
-  .slot {
+  .slot,
+  .hero-bg-wide,
+  .hero-bg-tall {
     animation: none;
     opacity: 1;
     transform: none;
